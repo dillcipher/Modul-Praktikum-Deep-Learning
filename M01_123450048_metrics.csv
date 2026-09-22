@@ -1,0 +1,7 @@
+run_id,module,student_id,seed,dataset,split,model,optimizer,learning_rate,batch_size,epochs,train_loss,val_loss,val_metric,test_metric,parameters,trainable_parameters,runtime_seconds,device,notes
+tanh_h16,M01,123450048,1048,make_moons,train-val-test,FNN_2-16-1,SGD,0.05,32,200,0.19645138084888458,0.20555467903614044,0.925000011920929,0.8583333492279053,65,65,2.7697087999999894,cpu,activation=tanh; hidden_size=16
+relu_h16,M01,123450048,1048,make_moons,train-val-test,FNN_2-16-1,SGD,0.05,32,200,0.20279549062252045,0.22684748470783234,0.9166666865348816,,65,65,2.5563485999996374,cpu,activation=relu; hidden_size=16
+relu_h4,M01,123450048,1048,make_moons,train-val-test,FNN_2-4-1,SGD,0.05,32,200,0.2439601868391037,0.2719901204109192,0.9083333611488342,,17,17,2.4844498000002204,cpu,activation=relu; hidden_size=4
+tanh_h4,M01,123450048,1048,make_moons,train-val-test,FNN_2-4-1,SGD,0.05,32,200,0.26124435663223267,0.2886970341205597,0.875,,17,17,2.717247099999895,cpu,activation=tanh; hidden_size=4
+sigmoid_h16,M01,123450048,1048,make_moons,train-val-test,FNN_2-16-1,SGD,0.05,32,200,0.2609638571739197,0.2899712324142456,0.8833333253860474,,65,65,2.62065819999998,cpu,activation=sigmoid; hidden_size=16
+sigmoid_h4,M01,123450048,1048,make_moons,train-val-test,FNN_2-4-1,SGD,0.05,32,200,0.2660472095012665,0.29520702362060547,0.8833333253860474,,17,17,2.6820568000002822,cpu,activation=sigmoid; hidden_size=4

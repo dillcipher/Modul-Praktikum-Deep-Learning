@@ -20,3 +20,14 @@ NIM: 123450048
 - Test accuracy: `0.8583`.
 
 Test set hanya digunakan setelah model final dipilih dari validation set.
+
+## Modul 2
+
+Pengumpulan Modul 2 Deep Learning: Backpropagation dan Automatic Differentiation.
+
+- `M02_123450048.ipynb`: notebook final yang sudah dijalankan ulang.
+- `M02_123450048.pdf`: PDF notebook final.
+- `M02_123450048_metrics.csv`: tabel gradient checking sembilan komponen.
+- `M02_123450048_metrics_loop.csv`: metrik diagnosis training loop bertahap.
+
+Gradient checking menghasilkan relative error maksimum sekitar `1.12e-10`. Training XOR versi benar menghasilkan loss akhir `0.0813` dan seluruh empat prediksi tepat.

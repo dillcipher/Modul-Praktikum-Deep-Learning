@@ -2,6 +2,9 @@
 
 Pengumpulan Modul 1 Deep Learning: Fondasi Jaringan Saraf, FNN, Aktivasi, dan Loss.
 
+Kelas: RC  
+NIM: 123450048
+
 ## Isi
 
 - `M01_123450048.ipynb`: notebook yang sudah dilengkapi dan dijalankan ulang.

@@ -1,5 +1,7 @@
-seed,tahap,yang_diperbaiki,loss_awal,loss_akhir,benar
-48,perbaikan-1,menambahkan ReLU,0.7267655788245534,0.6931471805599453,0
-48,perbaikan-2,menggunakan BCEWithLogitsLoss pada logit,0.6954279648739561,1.3666393667740161e-09,0
-48,perbaikan-3,memindahkan backward sebelum optimizer.step,0.6954279648739561,1.3666393667740161e-09,0
-48,perbaikan-4,menambahkan optimizer.zero_grad,0.6954279648739561,0.6934685048616572,0
+seed,tahap,yang_diperbaiki,loss_awal,loss_akhir,benar,prediksi
+48,rusak,-,,,,RuntimeError
+48,perbaikan-1,urutan: loss.backward() sebelum opt.step(),0.7368042678614849,0.6931471805599453,2.0,"[0, 0, 0, 0]"
+48,perbaikan-2,menambahkan opt.zero_grad() tiap epoch,0.7368042678614849,0.6982048672041569,2.0,"[0, 0, 0, 0]"
+48,perbaikan-3,menambahkan ReLU di antara dua Linear,0.7267655788245534,0.6974786812963296,2.0,"[0, 0, 0, 0]"
+48,perbaikan-4,BCEWithLogitsLoss langsung pada logit (tanpa sigmoid ganda),0.6954279648739561,0.6934685048616573,2.0,"[1, 0, 1, 0]"
+48,final,empat perbaikan + inisialisasi Kaiming,0.7312200850962901,0.09162081356271734,4.0,"[0, 1, 1, 0]"

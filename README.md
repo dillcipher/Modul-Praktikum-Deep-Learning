@@ -28,7 +28,7 @@ Pengumpulan Modul 2 Deep Learning: Backpropagation dan Automatic Differentiation
 - `modul-02/M02_123450048_metrics.csv`: tabel gradient checking sembilan komponen.
 - `modul-02/M02_123450048_metrics_loop.csv`: metrik diagnosis training loop bertahap.
 
-Gradient checking menghasilkan relative error maksimum sekitar `1.12e-10`. Training XOR versi benar menghasilkan loss akhir `0.0813` dan seluruh empat prediksi tepat.
+Gradient checking menghasilkan relative error maksimum sekitar `1.12e-10`. Keempat kesalahan training loop diperbaiki bertahap (tercatat di `metrics_loop.csv`); versi benar dengan inisialisasi Kaiming menghasilkan loss akhir XOR `0.0916` dan seluruh empat prediksi tepat.
 
 ## Modul 3 — Optimizer dan Strategi Pelatihan
 

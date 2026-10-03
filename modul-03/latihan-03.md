@@ -21,8 +21,8 @@ Mengapa batch 32 menghasilkan 1.875 update sedangkan batch 512 hanya 120 update 
 
 | Batch | Update/epoch | Total update | Val. loss | Val. acc | Waktu/epoch (s) |
 |---:|---:|---:|---:|---:|---:|
-| 32 | 375 | 1.875 | 0,7179 | 0,7393 | 1,15 |
-| 512 | 24 | 120 | 0,4281 | 0,8503 | 0,31 |
+| 32 | 375 | 1.875 | 0,7179 | 0,7393 | 1,22 |
+| 512 | 24 | 120 | 0,4281 | 0,8503 | 0,29 |
 
 Kolom `n_update` pada `df_bagian_f` sama persis dengan hitungan di atas.
 
@@ -33,7 +33,7 @@ Validation loss per epoch:
 ## Perbandingan dengan prediksi
 
 - **Jumlah update: sesuai.** 1.875 dan 120 update, sama dengan hitungan ⌈n/B⌉ × epoch.
-- **Kecepatan per epoch: sesuai.** Batch 512 sekitar 0,31 s per epoch, sedangkan batch 32 sekitar 1,15 s per epoch, hampir empat kali lebih lambat karena harus menjalankan 375 iterasi kecil per epoch.
+- **Kecepatan per epoch: sesuai.** Batch 512 sekitar 0,29 s per epoch, sedangkan batch 32 sekitar 1,22 s per epoch, lebih dari empat kali lebih lambat karena harus menjalankan 375 iterasi kecil per epoch.
 - **Validation loss: tidak sesuai.** Batch 512 justru lebih baik (0,4281) daripada batch 32 (0,7179), padahal batch 32 mendapat 15 kali lebih banyak update. Learning rate 0,05 dengan momentum 0,9 dipilih pada batch 128. Pada batch 32, gradien tiap mini-batch jauh lebih berderau, tetapi besar langkahnya tetap sama, sehingga model berosilasi; validation loss-nya naik dari 0,708 ke 0,855 sebelum turun lagi. Batch 512 memberi gradien yang lebih halus, sehingga 120 update-nya stabil.
 
 **Kesimpulan:** jumlah update yang lebih banyak tidak otomatis menghasilkan loss yang lebih rendah bila learning rate tidak disesuaikan dengan ukuran batch. Untuk perbandingan batch size yang adil, learning rate sebaiknya disetel ulang per batch size, misalnya dengan menskalakannya sebanding ukuran batch.

@@ -32,13 +32,12 @@ Gradient checking menghasilkan relative error maksimum sekitar `1.12e-10`. Keemp
 
 ## Modul 3 — Optimizer dan Strategi Pelatihan
 
-Dikerjakan di Data Science Workbench (starter versi 2026.2) dan dijalankan lewat Local Runner.
+Dikerjakan di Data Science Workbench (starter versi 2026.5) dan dijalankan lewat Local Runner.
 
 - `modul-03/M03_123450048.ipynb`: notebook final, lolos Restart Kernel and Run All.
-- `modul-03/M03_123450048.pdf`: laporan (maks. 2 halaman) mengikuti `template-laporan.md`, sumbernya `modul-03/M03_123450048.md`.
-- `modul-03/M03_123450048_metrics.csv`: 19 run (3 baseline learning rate, 9 run optimizer × learning rate, 1 latih ulang final, 6 run scheduler dan batch size).
+- `modul-03/M03_123450048.pdf`: laporan (maks. 2 halaman), sumbernya `modul-03/M03_123450048.md`.
+- `modul-03/M03_123450048_metrics.csv`: 15 run (9 run optimizer × learning rate, 6 run scheduler dan batch size).
 - `modul-03/latihan-03.md`: catatan Latihan Mandiri di Lab.
-- `modul-03/M03_123450048_gambar1.png`, `modul-03/M03_123450048_gambar2.png`: grafik pada laporan.
 
 ## Ringkasan hasil Modul 3
 

@@ -32,20 +32,19 @@ Gradient checking menghasilkan relative error maksimum sekitar `1.12e-10`. Keemp
 
 ## Modul 3 — Optimizer dan Strategi Pelatihan
 
-- `modul-03/M03_123450048.ipynb`: notebook final yang sudah dijalankan ulang.
-- `modul-03/M03_123450048.pdf`: PDF notebook final.
-- `modul-03/M03_123450048_metrics.csv`: 18 run (3 baseline learning rate, 9 run optimizer × learning rate, 6 run scheduler dan batch size).
-- `modul-03/M03_123450048_perbandingan.png`: grafik validation loss dan accuracy tiga optimizer pemenang.
+Dikerjakan di Data Science Workbench (starter versi 2026.2) dan dijalankan lewat Local Runner.
+
+- `modul-03/M03_123450048.ipynb`: notebook final, lolos Restart Kernel and Run All.
+- `modul-03/M03_123450048.pdf`: laporan (maks. 2 halaman), sumbernya `modul-03/M03_123450048.md`.
+- `modul-03/M03_123450048_metrics.csv`: 19 run (3 baseline learning rate, 9 run optimizer × learning rate, 1 latih ulang final, 6 run scheduler dan batch size).
+- `modul-03/latihan-03.md`: catatan Latihan Mandiri di Lab.
 
 ## Ringkasan hasil Modul 3
 
 - Dataset: Fashion-MNIST, subset terstratifikasi 12.000 latih / 3.000 validasi, model MLP 784 → 128 → 10, batch 128, 5 epoch.
-- Pemenang tiap optimizer (validation loss): SGD+momentum `lr=0.05` (`0.3988`), Adam `lr=0.001` (`0.4042`), SGD `lr=0.1` (`0.4324`).
-- Model final: SGD+momentum `lr=0.05`.
-- Test loss: `0.4318`.
-- Test accuracy: `0.8515`.
+- Pemenang tiap optimizer (validation loss): SGD+momentum `lr=0.05` (`0.4029`), Adam `lr=0.001` (`0.4042`), SGD `lr=0.1` (`0.4289`).
+- Model final: SGD+momentum `lr=0.05`, test loss `0.446`, test accuracy `0.8511`.
 - Kelas yang paling sering tertukar: T-shirt/top dan Shirt.
-- Scheduler cosine menurunkan validation loss menjadi `0.3748` pada anggaran epoch yang sama.
+- Scheduler cosine menurunkan validation loss menjadi `0.3744` pada anggaran epoch yang sama.
 
 Test set hanya digunakan satu kali setelah model final dipilih dari validation set.
-
